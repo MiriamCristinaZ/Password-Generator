@@ -16,14 +16,14 @@ This is a simple password generator application that allows users to customize a
 
 ## Usage
 
-1.Open <> in your web browser.
+1.Open <https://miriamcristinaz.github.io/Password-Generator/> in your web browser.
 2.Click the "Generate Password" button.
 3.Follow the prompts to specify password length and character types.
 4.View the generated password in the designated area.
 
 ## Deployment
 
-The deployed application is available at the following URL: <>
+The deployed application is available at the following URL: <https://miriamcristinaz.github.io/Password-Generator/>
 
 ## References
 
