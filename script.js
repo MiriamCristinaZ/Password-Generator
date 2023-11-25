@@ -138,3 +138,48 @@ function getPasswordOptions() {
 
   return passwordOptions; //This will return to the password options if none of the character options are chosen
 }
+//Function for getting a random element from an array
+function getRandom(arr) {
+  let randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
+
+// Function to generate password with user input
+function generatePassword() {
+  let options = getPasswordOptions();
+
+  if (!options) {
+    //User canceled or entered invalid options
+    return "";
+  }
+  //This line initializes an empty string, this variable will be used to concatenate all possible characters based on the user's selected character types.
+  let allChars = "";
+  //This line initializes an empty string, this variable will be used to build the final password.
+  let password = "";
+
+  if (options.includeLowercase) {
+    allChars += lowerCasedCharacters.join("");
+    password += getRandom(lowerCasedCharacters);
+  }
+
+  if (options.includeUppercase) {
+    allChars += upperCasedCharacters.join("");
+    password += getRandom(upperCasedCharacters);
+  }
+
+  if (options.includeNumeric) {
+    allChars += numericCharacters.join("");
+    password += getRandom(numericCharacters);
+  }
+
+  if (options.includeSpecial) {
+    allChars += specialCharacters.join("");
+    password += getRandom(specialCharacters);
+  }
+  //This loop is responsible for adding random characters to the password until the password reaches the desired length specified by the user in options.length
+  for (let i = password.length; i < options.length; i++) {
+    password += getRandom(allChars);
+  }
+
+  return password;
+}
