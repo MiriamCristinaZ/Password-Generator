@@ -6,7 +6,7 @@ This is a simple password generator application that allows users to customize a
 
 ## Screenshot
 
-[!Password Generator](screenshot.jpeg)
+![Password Generator](screenshot.jpeg)
 
 ## Features
 
