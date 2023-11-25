@@ -183,3 +183,20 @@ function generatePassword() {
 
   return password;
 }
+//This code is related to handling the user interface (UI) for the password generation functionality
+
+// This line uses document.querySelector("#generate") to select the HTML element with the ID "generate."
+var generateBtn = document.querySelector("#generate");
+
+//Write password to the #password input
+//This function helps in selecting the HTML element with the ID "password" using document.querySelector("#password"). This element is typically an input field where the generated password will be displayed.
+//Finally, it sets the value property of the selected input field to the generated password, effectively updating the displayed password in the UI.
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+
+//Add event listener to generate button
+//This line adds an event listener to the "click" event of the button referenced by generateBtn. When the button is clicked, the writePassword function is invoked. This is a common pattern for triggering an action (in this case, generating and displaying a password) in response to a user interaction with a button.
+generateBtn.addEventListener("click", writePassword);
